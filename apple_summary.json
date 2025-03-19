@@ -1,0 +1,214 @@
+{
+    "Company": "apple",
+    "Articles": [
+        {
+            "Title": "Apple AI tool transcribed the word 'racist' as 'Trump'",
+            "Published Date": "26 February 2025",
+            "Summary": "Apple's Dictation tool transcribes the word 'racist' as 'Trump' Tech giant says it is working to fix the problem with its speech-to-text tool. Expert in speech recognition says this explanation is 'not plausible'",
+            "Sentiment": "NEGATIVE",
+            "Topics": [
+                "Dictation",
+                "Expert",
+                "Apple",
+                "Trump",
+                "Tech"
+            ],
+            "Link": "https://www.bbc.co.uk/news/articles/c5ymvjjqzmeo"
+        },
+        {
+            "Title": "US politicians furious at UK demand for encrypted Apple data",
+            "Published Date": "14 February 2025",
+            "Summary": "Two US lawmakers have strongly condemned what they call the UK's \"dangerous\" and \"shortsighted\" request. Senator Ron Wyden and Congressman Andy Biggs have written to national intelligence director Tulsi Gabbard. They urge her to give the UK an ultimatum: \"Back down from this dangerous attack on US cybersecurity, or face serious",
+            "Sentiment": "NEGATIVE",
+            "Topics": [
+                "Two",
+                "Senator Ron Wyden",
+                "Tulsi Gabbard",
+                "Back",
+                "They"
+            ],
+            "Link": "https://www.bbc.co.uk/news/articles/c5yvn90pl5no"
+        },
+        {
+            "Title": "Apple gambles on new iPhone with AI features at lower cost",
+            "Published Date": "19 February 2025",
+            "Summary": "The iPhone 16e has the same processor as the more expensive iPhone 16. It has similar storage options, though a lower spec elsewhere, including fewer cameras. Apple has been struggling to find a new product that excites consumers. It will be hoping that bringing enhanced AI functionality to a less expensive phone will address that.",
+            "Sentiment": "NEGATIVE",
+            "Topics": [
+                "It",
+                "The",
+                "Apple"
+            ],
+            "Link": "https://www.bbc.co.uk/news/articles/cvgw30dr0w3o"
+        },
+        {
+            "Title": "Apple boss says its DEI programmes may change",
+            "Published Date": "25 February 2025",
+            "Summary": "Tim Cook says Apple may have to change its diversity practices. Comments came minutes after majority of shareholders rejected proposal. US President Donald Trump has called for an end to diversity, equity and inclusion programmes.",
+            "Sentiment": "NEGATIVE",
+            "Topics": [
+                "President Donald Trump",
+                "Comments",
+                "Tim Cook",
+                "Apple"
+            ],
+            "Link": "https://www.bbc.co.uk/news/articles/clyjv8e49deo"
+        },
+        {
+            "Title": "Apple commits to $500bn US investment",
+            "Published Date": "24 February 2025",
+            "Summary": "Apple plans to invest more than $500bn (Â£396bn) in the US over the next four years. The tech giant said it expected to create 20,000 new jobs over that time. Apple said the sum included everything from spending on suppliers to Apple TV+ productions.",
+            "Sentiment": "NEGATIVE",
+            "Topics": [
+                "The",
+                "Apple"
+            ],
+            "Link": "https://www.bbc.co.uk/news/articles/ce980m2xv30o"
+        },
+        {
+            "Title": "TikTok returns to Apple and Google app stores in the US",
+            "Published Date": "14 February 2025",
+            "Summary": "TikTok is again available on the US app stores of Apple and Google. President Donald Trump postponed enforcement of a ban of the social media platform until 5 April. The popular app is used by more than 170 million American users.",
+            "Sentiment": "NEGATIVE",
+            "Topics": [
+                "April",
+                "American",
+                "Apple",
+                "Google",
+                "President Donald Trump"
+            ],
+            "Link": "https://www.bbc.co.uk/news/articles/c4g91kyjw07o"
+        },
+        {
+            "Title": "What Apple pulling Advanced Data Protection means for you",
+            "Published Date": "26 February 2025",
+            "Summary": "Apple is removing Advanced Data Protection for UK customers. Home Office asked for the right to access data which it is applied to. Rather than comply, Apple said it would halt new UK sign-ups to the tool.",
+            "Sentiment": "NEGATIVE",
+            "Topics": [
+                "Home Office",
+                "Rather",
+                "Advanced Data Protection",
+                "Apple"
+            ],
+            "Link": "https://www.bbc.co.uk/news/articles/cn524lx9445o"
+        },
+        {
+            "Title": "Apple pulls data protection tool after UK government security row",
+            "Published Date": "21 February 2025",
+            "Summary": "Advanced Data Protection, external (ADP) means only account holders can view items such as photos or documents they have stored online through a process known as end-to-end encryption. Earlier this month the UK government asked for the right to see the data, which currently not even Apple can access. Apple has consistently opposed creating a \"backdoor\" in its",
+            "Sentiment": "NEGATIVE",
+            "Topics": [
+                "Earlier",
+                "Advanced Data Protection",
+                "Apple"
+            ],
+            "Link": "https://www.bbc.co.uk/news/articles/cgj54eq4vejo"
+        },
+        {
+            "Title": "US intelligence head 'not told' about UK's secret Apple data demand",
+            "Published Date": "26 February 2025",
+            "Summary": "US intelligence head 'not told' about UK's secret Apple data demand. Tulsi Gabbard says she was not informed in advance about the UK government's demand to be able to access Apple customers' encrypted data from anywhere in the world.",
+            "Sentiment": "NEGATIVE",
+            "Topics": [
+                "Tulsi Gabbard",
+                "Apple"
+            ],
+            "Link": "https://www.bbc.co.uk/news/articles/c1kjmddx2nzo"
+        },
+        {
+            "Title": "Secret hearing on Friday in Apple and UK government data row",
+            "Published Date": "12 March 2025",
+            "Summary": "Secret hearing on Friday in Apple and UK government data row. Apple's appeal against a UK government demand to be able to access its customers' most highly encrypted data is set to be considered at a secret hearing at the High Court on Friday. The US tech giant took legal action earlier this month.",
+            "Sentiment": "NEGATIVE",
+            "Topics": [
+                "Secret",
+                "High Court",
+                "Apple",
+                "Friday",
+                "The"
+            ],
+            "Link": "https://www.bbc.co.uk/news/articles/c798xv5qwylo"
+        }
+    ],
+    "Comparative Sentiment Insights": {
+        "Sentiment Distribution": {
+            "NEGATIVE": 10
+        },
+        "Comparisons": [
+            {
+                "Comparison": "Apple AI tool transcribed the word 'racist' as 'Trump' vs. US politicians furious at UK demand for encrypted Apple data",
+                "Impact": "Article 1 sentiment: NEGATIVE, Article 2 sentiment: NEGATIVE"
+            },
+            {
+                "Comparison": "Apple AI tool transcribed the word 'racist' as 'Trump' vs. Apple gambles on new iPhone with AI features at lower cost",
+                "Impact": "Article 1 sentiment: NEGATIVE, Article 2 sentiment: NEGATIVE"
+            }
+        ],
+        "Topic Analysis": {
+            "Common Topics": [],
+            "Unique Topics per Article": [
+                [
+                    "Trump",
+                    "Dictation",
+                    "Expert",
+                    "Tech",
+                    "Apple"
+                ],
+                [
+                    "Back",
+                    "Two",
+                    "Senator Ron Wyden",
+                    "They",
+                    "Tulsi Gabbard"
+                ],
+                [
+                    "It",
+                    "The",
+                    "Apple"
+                ],
+                [
+                    "Apple",
+                    "Comments",
+                    "Tim Cook",
+                    "President Donald Trump"
+                ],
+                [
+                    "The",
+                    "Apple"
+                ],
+                [
+                    "Google",
+                    "April",
+                    "President Donald Trump",
+                    "American",
+                    "Apple"
+                ],
+                [
+                    "Home Office",
+                    "Rather",
+                    "Advanced Data Protection",
+                    "Apple"
+                ],
+                [
+                    "Earlier",
+                    "Advanced Data Protection",
+                    "Apple"
+                ],
+                [
+                    "Tulsi Gabbard",
+                    "Apple"
+                ],
+                [
+                    "Secret",
+                    "High Court",
+                    "Apple",
+                    "The",
+                    "Friday"
+                ]
+            ]
+        }
+    },
+    "Overall Sentiment Conclusion": "apple's news coverage is negative.",
+    "Hindi Sentiment Summary": "apple की खबरों का समग्र झुकाव negative है।",
+    "Hindi_TTS_Audio_File": "apple_sentiment_hindi.mp3"
+}

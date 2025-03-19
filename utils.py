@@ -155,3 +155,91 @@ def save_analysis_json(result: dict, company_name: str) -> None:
     with open(file_name, "w", encoding='utf-8') as file:
         json.dump(result, file, indent=4, ensure_ascii=False)
     print(f"✅ Results saved in {file_name}")
+from collections import Counter
+
+def analyze_articles(links: list, company_name: str, desired_lines: int = 3) -> dict:
+    """
+    Processes each article by summarizing content, analyzing sentiment, extracting topics,
+    and generating comparative insights and sentiment conclusions.
+    
+    Args:
+        links (list): List of article URLs.
+        company_name (str): The company or topic name being analyzed.
+        desired_lines (int): Desired number of lines in each article's summary.
+    
+    Returns:
+        dict: The complete analysis result.
+    """
+    articles = []
+    sentiments = []
+
+    for link in tqdm(links, desc="Analyzing articles"):
+        try:
+            headline, pub_date, text = get_article_content(link)
+            combined_text = f"{headline}. {text}"
+            summary = summarize_text(combined_text, desired_lines)
+            sentiment = sentiment_analyzer(summary)[0]
+            topics = extract_topics(summary)
+
+            article_data = {
+                "Title": headline,
+                "Published Date": pub_date,
+                "Summary": summary,
+                "Sentiment": sentiment['label'],
+                "Topics": topics,
+                "Link": link
+            }
+
+            articles.append(article_data)
+            sentiments.append(sentiment['label'])
+        except Exception as e:
+            print(f"⚠️ Error processing {link}: {e}")
+
+    sentiment_counts = dict(Counter(sentiments))
+
+    # Comparative insights (first 2 comparisons only to keep output small)
+    comparisons = [
+        {
+            "Comparison": f"{a1['Title']} vs. {a2['Title']}",
+            "Impact": f"Article 1 sentiment: {a1['Sentiment']}, Article 2 sentiment: {a2['Sentiment']}"
+        }
+        for i, a1 in enumerate(articles)
+        for j, a2 in enumerate(articles)
+        if i < j
+    ][:2]
+
+    # Common and unique topics analysis
+    topic_sets = [set(a['Topics']) for a in articles if a['Topics']]
+    common_topics = list(set.intersection(*topic_sets)) if len(topic_sets) > 1 else []
+    unique_topics = [
+        list(topics - set(common_topics)) for topics in topic_sets
+    ] if topic_sets else []
+
+    # Determine overall sentiment
+    final_sentiment = max(sentiment_counts, key=sentiment_counts.get).lower()
+    hindi_summary_text = f"{company_name} की खबरों का समग्र झुकाव {final_sentiment} है।"
+
+    result = {
+        "Company": company_name,
+        "Articles": articles,
+        "Comparative Sentiment Insights": {
+            "Sentiment Distribution": sentiment_counts,
+            "Comparisons": comparisons,
+            "Topic Analysis": {
+                "Common Topics": common_topics,
+                "Unique Topics per Article": unique_topics
+            }
+        },
+        "Overall Sentiment Conclusion": f"{company_name}'s news coverage is {final_sentiment}.",
+        "Hindi Sentiment Summary": hindi_summary_text,
+        "Hindi_TTS_Audio_File": f"{company_name.lower()}_sentiment_hindi.mp3"
+    }
+
+    # Save JSON and generate Hindi TTS audio
+    save_analysis_json(result, company_name)
+    create_hindi_tts(hindi_summary_text, f"{company_name.lower()}_sentiment_hindi.mp3")
+
+    print(f"✅ Analysis completed for {company_name}")
+    print(json.dumps(result, indent=4, ensure_ascii=False))
+
+    return result
