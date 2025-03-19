@@ -143,18 +143,32 @@ def create_hindi_tts(text: str, filename: str) -> None:
     tts.save(filename)
     print(f"Hindi audio saved as {filename}")
 
+from pathlib import Path
+
+# Create a results folder if it doesn't exist
+RESULTS_DIR = Path("results")
+RESULTS_DIR.mkdir(exist_ok=True)
+
 def save_analysis_json(result: dict, company_name: str) -> None:
     """
-    Saves the analysis result as a JSON file for easy retrieval and reuse.
-    
-    Args:
-        result (dict): Dictionary containing analysis results.
-        company_name (str): Used for naming the output file.
+    Saves the analysis result as a JSON file inside the results folder.
     """
-    file_name = f"{company_name.lower()}_summary.json"
+    file_name = RESULTS_DIR / f"{company_name.lower()}_summary.json"
     with open(file_name, "w", encoding='utf-8') as file:
         json.dump(result, file, indent=4, ensure_ascii=False)
     print(f"✅ Results saved in {file_name}")
+
+def create_hindi_tts(text: str, filename: str) -> None:
+    """
+    Generates a Hindi audio file and saves inside the results folder.
+    """
+    audio_path = RESULTS_DIR / filename
+    tts = gTTS(text=text, lang='hi')
+    tts.save(audio_path)
+    print(f"✅ Hindi audio saved as {audio_path}")
+
+
+
 from collections import Counter
 
 def analyze_articles(links: list, company_name: str, desired_lines: int = 3) -> dict:
@@ -238,6 +252,8 @@ def analyze_articles(links: list, company_name: str, desired_lines: int = 3) -> 
     # Save JSON and generate Hindi TTS audio
     save_analysis_json(result, company_name)
     create_hindi_tts(hindi_summary_text, f"{company_name.lower()}_sentiment_hindi.mp3")
+
+
 
     print(f"✅ Analysis completed for {company_name}")
     print(json.dumps(result, indent=4, ensure_ascii=False))
