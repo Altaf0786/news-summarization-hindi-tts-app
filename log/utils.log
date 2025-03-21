@@ -1,0 +1,9 @@
+2025-03-21 10:11:38,770 - utils log - ERROR - Failed to load sentiment analysis pipeline: At least one of TensorFlow 2.0 or PyTorch should be installed. To install TensorFlow 2.0, read the instructions at https://www.tensorflow.org/install/ To install PyTorch, read the instructions at https://pytorch.org/.
+2025-03-21 10:12:54,990 - utils log - INFO - Sentiment analysis pipeline loaded successfully.
+2025-03-21 10:13:03,814 - utils log - INFO - Summarization pipeline loaded successfully.
+2025-03-21 10:15:09,666 - utils log - INFO - Sentiment analysis pipeline loaded successfully.
+2025-03-21 10:15:16,845 - utils log - INFO - Summarization pipeline loaded successfully.
+2025-03-21 10:57:18,796 - utils log - INFO - Sentiment analysis pipeline loaded successfully.
+2025-03-21 10:57:27,675 - utils log - INFO - Summarization pipeline loaded successfully.
+2025-03-21 11:09:55,637 - utils log - INFO - Sentiment analysis pipeline loaded successfully.
+2025-03-21 11:10:05,474 - utils log - INFO - Summarization pipeline loaded successfully.
